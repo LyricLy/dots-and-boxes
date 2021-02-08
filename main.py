@@ -208,6 +208,7 @@ class DiscordGame(menus.Menu):
 
 
 bot = commands.Bot(command_prefix=["Ke2!!", "ke2!!"], intents=discord.Intents(guilds=True, messages=True, members=True, reactions=True))
+bot.load_extension("jishaku")
 player_games = {}
 
 @commands.max_concurrency(1, commands.BucketType.channel)
