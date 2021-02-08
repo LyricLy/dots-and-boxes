@@ -288,7 +288,7 @@ async def move(x, y):
 @app.route("/link/<int:id>")
 async def link(id):
     resp = Response("All good. You can exit this page now.")
-    resp.set_cookie("id", str(id))
+    resp.set_cookie("id", str(id), max_age=2**31-1)
     return resp
 
 bot.loop.create_task(app.run_task("0.0.0.0", 7000))
