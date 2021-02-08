@@ -207,7 +207,7 @@ class DiscordGame(menus.Menu):
         self.end()
 
 
-bot = commands.Bot(command_prefix=["Ke2!!", "ke2!!"])
+bot = commands.Bot(command_prefix=["Ke2!!", "ke2!!"], intents=discord.Intents(guilds=True, messages=True, members=True, reactions=True))
 player_games = {}
 
 @commands.max_concurrency(1, commands.BucketType.channel)
