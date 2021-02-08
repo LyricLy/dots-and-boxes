@@ -3,13 +3,15 @@ import re
 import traceback
 from typing import Optional
 
+import requests
 import discord
 from discord.ext import commands, menus
 from quart import Quart, request, Response
 
 
 ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-DOMAIN = "14.137.10.205:7000"
+ip = requests.get("https://api.ipify.org").text
+DOMAIN = f"{ip}:7000"
 DOT = "·"
 HORI_LINE = " "
 THICK_HORI_LINE = "═"
