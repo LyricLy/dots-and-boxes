@@ -209,7 +209,7 @@ class DiscordGame(menus.Menu):
         self.end()
 
 
-bot = commands.Bot(command_prefix=["Ke2!!", "ke2!!"], intents=discord.Intents(guilds=True, messages=True, members=True, reactions=True))
+bot = commands.Bot(command_prefix="tii!", intents=discord.Intents(guilds=True, messages=True, members=True, reactions=True), help_command=None)
 bot.load_extension("jishaku")
 player_games = {}
 
